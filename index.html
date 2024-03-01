@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    ok-fine{
+    color:red;
+    }
+    </style>
+</head>
+<body class="container mx-auto">
+
+    <!-- search filed ar kaj kora holo akana -->
+
+
+    <section class="bg-gray-300 p-6 mb-3">
+        <input id="inputText" type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+        <button onclick="searchBtn()" class="btn btn-accent">Accent</button>
+
+    </section>
+    <section id="togoBtn" class="text-center hidden">
+        <span class="loading loading-spinner loading-lg"></span>
+    </section>
+
+    <!-- mobil degine ar kaj kora holo akana  -->
+    <section>
+        <div id="card-container" class="grid grid-col-1 md:grid-cols-2 lg:grid-cols-4 gap-7">
+        </div>
+    </section>
+    <section id="showALlbtn" onclick="showALlBtns()" class="btn btn-accent hidden">Accent</button>
+
+    </section>
+
+ <section>
+
+
+    <!-- You can open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="show_more_details.showModal()">open modal</button> -->
+<dialog id="show_details_modal" class="modal">
+  <div id="kicuToHoba" class="modal-box ok-fine w-11/12 max-w-5xl">
+    <h3 class="font-bold text-lg">Hello!</h3>
+    <p class="py-4">Click the button below to close</p>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+ </section>
+
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
