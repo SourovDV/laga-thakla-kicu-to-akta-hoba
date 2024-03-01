@@ -64,12 +64,21 @@ const displayPhones = (phone,showAll)=>{
     const kicuToHoba = document.getElementById('kicuToHoba')
     kicuToHoba.classList.add('ok-fine')
     kicuToHoba.innerHTML = `
+    <img src="${id.image}" alt="">
     <h1>${id.slug }</h1>
     <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
     <p><span  class="font-extrabold">Stroge:</span> <span>${id.mainFeatures.storage}</span></p>
 
     <p><span  class="font-extrabold">Display Size:</span> <span>${id.releaseDate}</span></p>
     <p><span  class="font-extrabold">Name:</span> <span>${id.brand}</span></p>
+
+
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
     
     `
 
